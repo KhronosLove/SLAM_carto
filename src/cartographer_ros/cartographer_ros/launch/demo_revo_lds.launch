@@ -29,6 +29,8 @@
     <remap from="imu" to="/imu/data_raw" />
     <remap from="scan_1" to="scan_wj_1" />
     <remap from="scan_2" to="scan_wj_2" />
+<!-- 
+    <remap from="/cmd_vel" to="/cmd_vel_111" /> -->
   </node>
 
   <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros"

@@ -7,7 +7,6 @@ Panels:
         - /Global Options1
         - /Status1
         - /TF1/Frames1
-        - /Odometry1
       Splitter Ratio: 0.6006709933280945
     Tree Height: 719
   - Class: rviz/Selection
@@ -55,28 +54,10 @@ Visualization Manager:
       Reference Frame: <Fixed Frame>
       Value: true
     - Class: rviz/TF
-      Enabled: true
+      Enabled: false
       Frame Timeout: 15
       Frames:
         All Enabled: false
-        base_link:
-          Value: false
-        dir_link:
-          Value: false
-        imu_link:
-          Value: false
-        laser_wj_1:
-          Value: true
-        laser_wj_2:
-          Value: true
-        left_wheel:
-          Value: false
-        map:
-          Value: true
-        odom_combined:
-          Value: true
-        right_wheel:
-          Value: false
       Marker Alpha: 1
       Marker Scale: 1
       Name: TF
@@ -84,23 +65,9 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        map:
-          odom_combined:
-            base_link:
-              dir_link:
-                {}
-              imu_link:
-                {}
-              laser_wj_1:
-                {}
-              laser_wj_2:
-                {}
-              left_wheel:
-                {}
-              right_wheel:
-                {}
+        {}
       Update Interval: 0
-      Value: true
+      Value: false
     - Alpha: 1
       Class: rviz/RobotModel
       Collision Enabled: false
@@ -116,6 +83,11 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        camera:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         dir_link:
           Alpha: 1
           Show Axes: false
@@ -136,12 +108,7 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        left_wheel:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        right_wheel:
+        support:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -221,7 +188,7 @@ Visualization Manager:
       Value: false
     - Alpha: 0.699999988079071
       Class: rviz/Map
-      Color Scheme: map
+      Color Scheme: costmap
       Draw Behind: false
       Enabled: false
       Name: Map-Global
@@ -231,7 +198,7 @@ Visualization Manager:
       Value: false
     - Alpha: 0.699999988079071
       Class: rviz/Map
-      Color Scheme: map
+      Color Scheme: costmap
       Draw Behind: false
       Enabled: false
       Name: Map-local
@@ -260,7 +227,7 @@ Visualization Manager:
       Queue Size: 10
       Selectable: true
       Size (Pixels): 3
-      Size (m): 0.019999999552965164
+      Size (m): 0.009999999776482582
       Style: Flat Squares
       Topic: /scan_wj_1
       Unreliable: false
@@ -288,7 +255,7 @@ Visualization Manager:
       Queue Size: 10
       Selectable: true
       Size (Pixels): 3
-      Size (m): 0.019999999552965164
+      Size (m): 0.009999999776482582
       Style: Flat Squares
       Topic: /scan_wj_2
       Unreliable: false
@@ -298,21 +265,21 @@ Visualization Manager:
     - Alpha: 1
       Class: rviz/Polygon
       Color: 25; 255; 0
-      Enabled: false
+      Enabled: true
       Name: Polygon-global
       Queue Size: 10
       Topic: /move_base/global_costmap/footprint
       Unreliable: false
-      Value: false
+      Value: true
     - Alpha: 1
       Class: rviz/Polygon
       Color: 25; 255; 0
-      Enabled: false
+      Enabled: true
       Name: Polygon-local
       Queue Size: 10
       Topic: /move_base/local_costmap/footprint
       Unreliable: false
-      Value: false
+      Value: true
     - Alpha: 0.699999988079071
       Class: rviz/Map
       Color Scheme: map
@@ -391,7 +358,7 @@ Visualization Manager:
       Enabled: true
       Name: Imu
       Queue Size: 10
-      Topic: /imu/data
+      Topic: /imu/data_raw
       Unreliable: false
       Value: true
       fixed_frame_orientation: true
@@ -412,7 +379,7 @@ Visualization Manager:
           Scale: 1
           Value: true
         Value: false
-      Enabled: true
+      Enabled: false
       Keep: 100
       Name: Odometry
       Position Tolerance: 0.10000000149011612
@@ -429,6 +396,14 @@ Visualization Manager:
         Value: Arrow
       Topic: /odom
       Unreliable: false
+      Value: false
+    - Class: rviz/MarkerArray
+      Enabled: true
+      Marker Topic: /landmark_poses_list
+      Name: landmark
+      Namespaces:
+        Landmarks: true
+      Queue Size: 100
       Value: true
   Enabled: true
   Global Options:
@@ -457,7 +432,7 @@ Visualization Manager:
   Value: true
   Views:
     Current:
-      Angle: -0.12999984622001648
+      Angle: 1.454999566078186
       Class: rviz/TopDownOrtho
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
@@ -467,10 +442,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Scale: 101.15840911865234
+      Scale: 110.78141784667969
       Target Frame: <Fixed Frame>
-      X: 0.5396298766136169
-      Y: -0.14157617092132568
+      X: 0.9342300295829773
+      Y: -0.07530384510755539
     Saved: ~
 Window Geometry:
   Displays:

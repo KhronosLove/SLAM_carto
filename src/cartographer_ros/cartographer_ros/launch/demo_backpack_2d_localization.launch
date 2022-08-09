@@ -20,7 +20,7 @@
   <!-- <param name="robot_description" command="$(find xacro)/xacro $(find cartographer_ros)/urdf/simBot.xacro" />
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" /> -->
 
-  <node name="map_server" pkg="map_server" type="map_server" args="/home/xjtlu/Downloads/mymap.yaml" output="screen">
+  <node name="map_server" pkg="map_server" type="map_server" args="/home/xjtlu/Downloads/laser.yaml" output="screen">
     <param name="frame_id" value="map"/>
   </node>
 
@@ -28,16 +28,16 @@
       type="cartographer_node" args="
           -configuration_directory $(find cartographer_ros)/configuration_files
           -configuration_basename backpack_2d_localization.lua
-          -load_state_filename /home/xjtlu/Downloads/mymap.pbstream"
+          -load_state_filename /home/xjtlu/Downloads/laser.pbstream"
       output="screen">
     <!-- <remap from="odom_combined" to="odom" /> -->
-    <remap from="imu" to="/imu/data" />
+    <remap from="imu" to="/imu/data_raw" />
     <remap from="scan_1" to="scan_wj_1" />
     <remap from="scan_2" to="scan_wj_2" />
   </node>
 
   <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros"
-      type="cartographer_occupancy_grid_node" args="-resolution 0.05
+      type="cartographer_occupancy_grid_node" args="-resolution 0.01
                                                     -pure_localization 1" />
 
   <node name="rviz" pkg="rviz" type="rviz" required="true"

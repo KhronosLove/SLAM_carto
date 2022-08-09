@@ -1,7 +1,5 @@
-<!-- 根标签，必须声明 xmlns:xacro -->
 <robot name="my_base" xmlns:xacro="http://www.ros.org/wiki/xacro">
-    <!-- 封装变量、常量 -->
-    <!-- PI 值设置精度需要高一些，否则后续车轮翻转量计算时，可能会出现肉眼不能察觉的车轮倾斜，从而导致模型抖动 -->
+    <!-- PI 值设置 -->
     <xacro:property name="PI" value="3.1415926" />
     <!-- 宏:黑色设置 -->
     <material name="black">
@@ -9,10 +7,10 @@
     </material>
     <!-- 底盘属性 -->
     <!-- <xacro:property name="base_footprint_radius" value="0.001" /> -->
-    <xacro:property name="base_link_length" value="0.44" /> <!-- base_link 长 -->
-    <xacro:property name="base_link_width" value="0.30" /> <!-- base_link 宽 -->
+    <xacro:property name="base_link_length" value="0.55" /> <!-- base_link 长 -->
+    <xacro:property name="base_link_width" value="0.44" /> <!-- base_link 宽 -->
     <xacro:property name="base_link_height" value="0.21" /> <!-- base_link 高 -->
-    <xacro:property name="earth_space" value="0.08" /> <!-- 底盘离地间距 -->
+    <xacro:property name="earth_space" value="0.09" /> <!-- 底盘离地间距 -->
  
     <!-- <link name="base_footprint">
         <visual>
@@ -27,7 +25,7 @@
             <geometry>
                 <box size="${base_link_length} ${base_link_width} ${base_link_height}" />
             </geometry>
-            <origin xyz="0 0 0" rpy="0 0 0" />
+            <origin xyz="0 0 ${earth_space}" rpy="0 0 0" />
             <material name="yellow">
                 <color rgba="0.5 0.3 0.0 0.5" />
             </material>
@@ -41,7 +39,7 @@
         <origin xyz="0 0 ${earth_space + base_link_height / 2 }" />
     </joint> -->
 
-    <!-- direction link -->
+    <!-- direction link 一个红色的圆盘指示小车车头的方向 -->
     <link name="dir_link">
         <visual>
             <geometry>
@@ -57,7 +55,6 @@
     </joint>
  
     <!-- 驱动轮 -->
-    <!-- 驱动轮属性 -->
     <xacro:property name="wheel_radius" value="0.085" /> <!-- 半径 -->
     <xacro:property name="wheel_length" value="0.045" /> <!-- 宽度 -->
  
@@ -81,11 +78,10 @@
         </joint>
     </xacro:macro>
     
-    <xacro:add_wheels name="left" flag="1" />
-    <xacro:add_wheels name="right" flag="-1" />
+    <!-- <xacro:add_wheels name="left" flag="1" />
+    <xacro:add_wheels name="right" flag="-1" /> -->
  
     <!-- 支撑轮 -->
-    <!-- 支撑轮属性 -->
     <xacro:property name="support_wheel_radius" value="0.03" /> <!-- 支撑轮半径 -->
  
     <!-- 支撑轮宏 -->
