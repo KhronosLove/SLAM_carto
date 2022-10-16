@@ -402,7 +402,7 @@ Visualization Manager:
       Marker Topic: /landmark_poses_list
       Name: landmark
       Namespaces:
-        Landmarks: true
+        {}
       Queue Size: 100
       Value: true
   Enabled: true
@@ -432,7 +432,7 @@ Visualization Manager:
   Value: true
   Views:
     Current:
-      Angle: 1.454999566078186
+      Angle: 0.0749998614192009
       Class: rviz/TopDownOrtho
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
@@ -442,10 +442,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Scale: 110.78141784667969
+      Scale: 137.09483337402344
       Target Frame: <Fixed Frame>
-      X: 0.9342300295829773
-      Y: -0.07530384510755539
+      X: 0.5933169722557068
+      Y: 0.5069210529327393
     Saved: ~
 Window Geometry:
   Displays:

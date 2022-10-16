@@ -921,8 +921,9 @@ build sensor_msgs_generate_messages_lisp: phony
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/xjtlu/cartog_ws/build_isolated/cartographer_ros && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-  DESC = No interactive CMake dialog available...
+  COMMAND = cd /home/xjtlu/cartog_ws/build_isolated/cartographer_ros && /usr/bin/cmake-gui -S/home/xjtlu/cartog_ws/src/cartographer_ros/cartographer_ros -B/home/xjtlu/cartog_ws/build_isolated/cartographer_ros
+  DESC = Running CMake cache editor...
+  pool = console
   restat = 1
 
 build edit_cache: phony CMakeFiles/edit_cache.util
@@ -1110,8 +1111,9 @@ build gtest/rebuild_cache: phony gtest/CMakeFiles/rebuild_cache.util
 # Utility command for edit_cache
 
 build gtest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/xjtlu/cartog_ws/build_isolated/cartographer_ros/gtest && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-  DESC = No interactive CMake dialog available...
+  COMMAND = cd /home/xjtlu/cartog_ws/build_isolated/cartographer_ros/gtest && /usr/bin/cmake-gui -S/home/xjtlu/cartog_ws/src/cartographer_ros/cartographer_ros -B/home/xjtlu/cartog_ws/build_isolated/cartographer_ros
+  DESC = Running CMake cache editor...
+  pool = console
   restat = 1
 
 build gtest/edit_cache: phony gtest/CMakeFiles/edit_cache.util
@@ -1192,8 +1194,9 @@ build gtest/googlemock/rebuild_cache: phony gtest/googlemock/CMakeFiles/rebuild_
 # Utility command for edit_cache
 
 build gtest/googlemock/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/xjtlu/cartog_ws/build_isolated/cartographer_ros/gtest/googlemock && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-  DESC = No interactive CMake dialog available...
+  COMMAND = cd /home/xjtlu/cartog_ws/build_isolated/cartographer_ros/gtest/googlemock && /usr/bin/cmake-gui -S/home/xjtlu/cartog_ws/src/cartographer_ros/cartographer_ros -B/home/xjtlu/cartog_ws/build_isolated/cartographer_ros
+  DESC = Running CMake cache editor...
+  pool = console
   restat = 1
 
 build gtest/googlemock/edit_cache: phony gtest/googlemock/CMakeFiles/edit_cache.util
@@ -1346,8 +1349,9 @@ build gtest/googletest/rebuild_cache: phony gtest/googletest/CMakeFiles/rebuild_
 # Utility command for edit_cache
 
 build gtest/googletest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/xjtlu/cartog_ws/build_isolated/cartographer_ros/gtest/googletest && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-  DESC = No interactive CMake dialog available...
+  COMMAND = cd /home/xjtlu/cartog_ws/build_isolated/cartographer_ros/gtest/googletest && /usr/bin/cmake-gui -S/home/xjtlu/cartog_ws/src/cartographer_ros/cartographer_ros -B/home/xjtlu/cartog_ws/build_isolated/cartographer_ros
+  DESC = Running CMake cache editor...
+  pool = console
   restat = 1
 
 build gtest/googletest/edit_cache: phony gtest/googletest/CMakeFiles/edit_cache.util
@@ -1858,8 +1862,9 @@ build cartographer_ros/test: phony cartographer_ros/CMakeFiles/test.util
 # Utility command for edit_cache
 
 build cartographer_ros/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/xjtlu/cartog_ws/build_isolated/cartographer_ros/cartographer_ros && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-  DESC = No interactive CMake dialog available...
+  COMMAND = cd /home/xjtlu/cartog_ws/build_isolated/cartographer_ros/cartographer_ros && /usr/bin/cmake-gui -S/home/xjtlu/cartog_ws/src/cartographer_ros/cartographer_ros -B/home/xjtlu/cartog_ws/build_isolated/cartographer_ros
+  DESC = Running CMake cache editor...
+  pool = console
   restat = 1
 
 build cartographer_ros/edit_cache: phony cartographer_ros/CMakeFiles/edit_cache.util

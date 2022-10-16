@@ -685,8 +685,9 @@ build sensor_msgs_generate_messages_lisp: phony
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/xjtlu/cartog_ws/build_isolated/cartographer_rviz && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-  DESC = No interactive CMake dialog available...
+  COMMAND = cd /home/xjtlu/cartog_ws/build_isolated/cartographer_rviz && /usr/bin/cmake-gui -S/home/xjtlu/cartog_ws/src/cartographer_ros/cartographer_rviz -B/home/xjtlu/cartog_ws/build_isolated/cartographer_rviz
+  DESC = Running CMake cache editor...
+  pool = console
   restat = 1
 
 build edit_cache: phony CMakeFiles/edit_cache.util
@@ -820,8 +821,9 @@ build gtest/rebuild_cache: phony gtest/CMakeFiles/rebuild_cache.util
 # Utility command for edit_cache
 
 build gtest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/xjtlu/cartog_ws/build_isolated/cartographer_rviz/gtest && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-  DESC = No interactive CMake dialog available...
+  COMMAND = cd /home/xjtlu/cartog_ws/build_isolated/cartographer_rviz/gtest && /usr/bin/cmake-gui -S/home/xjtlu/cartog_ws/src/cartographer_ros/cartographer_rviz -B/home/xjtlu/cartog_ws/build_isolated/cartographer_rviz
+  DESC = Running CMake cache editor...
+  pool = console
   restat = 1
 
 build gtest/edit_cache: phony gtest/CMakeFiles/edit_cache.util
@@ -902,8 +904,9 @@ build gtest/googlemock/rebuild_cache: phony gtest/googlemock/CMakeFiles/rebuild_
 # Utility command for edit_cache
 
 build gtest/googlemock/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/xjtlu/cartog_ws/build_isolated/cartographer_rviz/gtest/googlemock && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-  DESC = No interactive CMake dialog available...
+  COMMAND = cd /home/xjtlu/cartog_ws/build_isolated/cartographer_rviz/gtest/googlemock && /usr/bin/cmake-gui -S/home/xjtlu/cartog_ws/src/cartographer_ros/cartographer_rviz -B/home/xjtlu/cartog_ws/build_isolated/cartographer_rviz
+  DESC = Running CMake cache editor...
+  pool = console
   restat = 1
 
 build gtest/googlemock/edit_cache: phony gtest/googlemock/CMakeFiles/edit_cache.util
@@ -1062,8 +1065,9 @@ build gtest/googletest/rebuild_cache: phony gtest/googletest/CMakeFiles/rebuild_
 # Utility command for edit_cache
 
 build gtest/googletest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/xjtlu/cartog_ws/build_isolated/cartographer_rviz/gtest/googletest && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-  DESC = No interactive CMake dialog available...
+  COMMAND = cd /home/xjtlu/cartog_ws/build_isolated/cartographer_rviz/gtest/googletest && /usr/bin/cmake-gui -S/home/xjtlu/cartog_ws/src/cartographer_ros/cartographer_rviz -B/home/xjtlu/cartog_ws/build_isolated/cartographer_rviz
+  DESC = Running CMake cache editor...
+  pool = console
   restat = 1
 
 build gtest/googletest/edit_cache: phony gtest/googletest/CMakeFiles/edit_cache.util

@@ -121,5 +121,6 @@
 #/home/xjtlu/cartog_ws/src/cartographer_ros/cartographer_ros/urdf/backpack_3d.urdf
 #/home/xjtlu/cartog_ws/src/cartographer_ros/cartographer_ros/urdf/simBot.xacro
 #/home/xjtlu/cartog_ws/src/cartographer_ros/cartographer_ros/urdf/xacro
+#/home/xjtlu/cartog_ws/src/cartographer_ros/cartographer_ros/urdf/xacro/camera.xacro
 #/home/xjtlu/cartog_ws/src/cartographer_ros/cartographer_ros/urdf/xacro/car.xacro
 #/home/xjtlu/cartog_ws/src/cartographer_ros/cartographer_ros/urdf/xacro/laser.xacro

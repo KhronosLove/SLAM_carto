@@ -20,7 +20,7 @@
   <!-- <param name="robot_description" command="$(find xacro)/xacro $(find cartographer_ros)/urdf/simBot.xacro" />
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" /> -->
 
-  <node name="map_server" pkg="map_server" type="map_server" args="/home/xjtlu/Downloads/laser.yaml" output="screen">
+  <node name="map_server" pkg="map_server" type="map_server" args="/home/xjtlu/Downloads/mymap.yaml" output="screen">
     <param name="frame_id" value="map"/>
   </node>
 
@@ -28,7 +28,7 @@
       type="cartographer_node" args="
           -configuration_directory $(find cartographer_ros)/configuration_files
           -configuration_basename backpack_2d_localization.lua
-          -load_state_filename /home/xjtlu/Downloads/laser.pbstream"
+          -load_state_filename /home/xjtlu/Downloads/mymap.pbstream"
       output="screen">
     <!-- <remap from="odom_combined" to="odom" /> -->
     <remap from="imu" to="/imu/data_raw" />

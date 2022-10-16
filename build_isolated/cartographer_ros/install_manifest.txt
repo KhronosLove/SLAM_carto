@@ -32,6 +32,7 @@
 /home/xjtlu/cartog_ws/install_isolated/share/cartographer_ros/launch/backpack_2d.launch
 /home/xjtlu/cartog_ws/install_isolated/share/cartographer_ros/launch/grpc_demo_backpack_2d.launch
 /home/xjtlu/cartog_ws/install_isolated/share/cartographer_ros/launch/offline_backpack_3d.launch
+/home/xjtlu/cartog_ws/install_isolated/share/cartographer_ros/urdf/xacro/camera.xacro
 /home/xjtlu/cartog_ws/install_isolated/share/cartographer_ros/urdf/xacro/laser.xacro
 /home/xjtlu/cartog_ws/install_isolated/share/cartographer_ros/urdf/xacro/car.xacro
 /home/xjtlu/cartog_ws/install_isolated/share/cartographer_ros/urdf/backpack_2d.urdf

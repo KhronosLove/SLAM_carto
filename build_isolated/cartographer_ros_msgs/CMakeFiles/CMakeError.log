@@ -1,11 +1,11 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/xjtlu/cartog_ws/build_isolated/cartographer_ros_msgs/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/ninja cmTC_ed1c8 && [1/2] Building C object CMakeFiles/cmTC_ed1c8.dir/src.c.o
-[2/2] Linking C executable cmTC_ed1c8
-FAILED: cmTC_ed1c8 
-: && /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -rdynamic CMakeFiles/cmTC_ed1c8.dir/src.c.o  -o cmTC_ed1c8   && :
-/usr/bin/ld: CMakeFiles/cmTC_ed1c8.dir/src.c.o: in function `main':
+Run Build Command(s):/usr/bin/ninja cmTC_229c2 && [1/2] Building C object CMakeFiles/cmTC_229c2.dir/src.c.o
+[2/2] Linking C executable cmTC_229c2
+FAILED: cmTC_229c2 
+: && /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -rdynamic CMakeFiles/cmTC_229c2.dir/src.c.o  -o cmTC_229c2   && :
+/usr/bin/ld: CMakeFiles/cmTC_229c2.dir/src.c.o: in function `main':
 src.c:(.text+0x46): undefined reference to `pthread_create'
 /usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
 /usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
@@ -36,10 +36,10 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/xjtlu/cartog_ws/build_isolated/cartographer_ros_msgs/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/ninja cmTC_62f54 && [1/2] Building C object CMakeFiles/cmTC_62f54.dir/CheckFunctionExists.c.o
-[2/2] Linking C executable cmTC_62f54
-FAILED: cmTC_62f54 
-: && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=pthread_create  -rdynamic CMakeFiles/cmTC_62f54.dir/CheckFunctionExists.c.o  -o cmTC_62f54  -lpthreads && :
+Run Build Command(s):/usr/bin/ninja cmTC_ce680 && [1/2] Building C object CMakeFiles/cmTC_ce680.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_ce680
+FAILED: cmTC_ce680 
+: && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=pthread_create  -rdynamic CMakeFiles/cmTC_ce680.dir/CheckFunctionExists.c.o  -o cmTC_ce680  -lpthreads && :
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
 ninja: build stopped: subcommand failed.

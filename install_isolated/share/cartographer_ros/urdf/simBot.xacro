@@ -3,4 +3,5 @@
 <robot name="cartographer_backpack_2d" xmlns:xacro="http://wiki.ros.org/xacro">
     <xacro:include filename="xacro/car.xacro" />
     <xacro:include filename="xacro/laser.xacro" />
+    <xacro:include filename="xacro/camera.xacro" />
 </robot>

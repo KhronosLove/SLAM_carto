@@ -3,10 +3,11 @@
     <material name="orange">
         <color rgba="1.0 0.5 0.2 1" />
     </material>
-    <material name="gray">
-        <color rgba="0.2 0.2 0.2 1" />
+    <material name="green">
+        <color rgba="0.5 1.0 0.5 0.6" />
     </material>
 
+    <!-- IMU -->
     <link name="imu_link">
         <visual>
         <origin xyz="0 0 0" />
@@ -14,7 +15,7 @@
             <!--box size="0.034 0.034 0.016" /-->
             <box size="0.0 0.0 0.0" />
         </geometry>
-        <material name="orange" />
+        <material name="green" />
         </visual>
     </link>
 
@@ -25,9 +26,10 @@
     </joint>
 
     <!-- 雷达 -->
-    <!-- 雷达属性 -->
     <xacro:property name="laser_length" value="0.0935" /> <!-- 高度 -->
     <xacro:property name="laser_radius" value="0.04447" /> <!-- 半径 -->
+    <xacro:property name="laser_x" value="0.445" /> <!-- x轴距离 -->
+    <xacro:property name="laser_y" value="0.345" /> <!-- y轴距离 -->
     
     <xacro:macro name="add_lasers" params="name flag">
         <link name="laser_wj${name}">
@@ -36,7 +38,7 @@
             <geometry>
                 <cylinder length="${laser_length}" radius="${laser_radius}" />
             </geometry>
-            <material name="gray" />
+            <material name="green" />
             </visual>
         </link>
  
@@ -44,7 +46,7 @@
             <parent link="base_link" />
             <child link="laser_wj${name}" />
             <!-- y轴配准的话，2号laser y轴要多0.05 z=底盘高度/2+雷达高度/2 -->
-            <origin rpy="0 0 ${-(flag-1)*PI/2}" xyz="${flag*base_link_length/2} ${flag*base_link_width/2} ${base_link_height/2+earth_space/2}" />
+            <origin rpy="0 0 ${-(flag-1)*PI/2}" xyz="${flag*laser_x/2} ${flag*laser_y/2} ${base_link_height/2+earth_space+laser_length/2}" />
         </joint>
     </xacro:macro>
 
